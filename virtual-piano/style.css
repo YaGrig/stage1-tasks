@@ -94,7 +94,12 @@ body {
 	transition: 0.3s;
 	cursor: pointer;
 }
-.piano-key:hover {
+.piano-key-hover {
+	background-color: #fff;
+}
+.playing {
+	width: 90px;
+	height: 280px;
 	background-color: #fff;
 }
 .keys-sharp {
@@ -117,6 +122,13 @@ body {
 	z-index: 3;
 	pointer-events: auto;
 	transform-origin: center top;
+	transition: 0.3s;
+}
+.piano-key.sharplaying {
+	z-index: 1;
+	width: 64px;
+	height: 180px;
+	background-color: black;
 }
 .piano-key.piano-key-active,
 .piano-key.sharp.piano-key-active {
@@ -167,7 +179,7 @@ body {
 	display: block;
 }
 .piano-key-letter::before {
-	content: attr(data-letter);
+	content: attr(data-letters);
 }
 
 .piano-key-remove-mouse:active::before {

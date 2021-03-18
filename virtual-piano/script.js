@@ -29,3 +29,4 @@ pianokeys.forEach(key => key.addEventListener('click', (event) => {
       }
       else {key.classList.add('.piano-key.sharplaying')}
   }))
+
